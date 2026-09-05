@@ -491,3 +491,26 @@ the end. **Task 6 will post `[AIT-STOP]` rather than `[AIT-NEXT]`.**
 **The one line worth keeping from all of it:** the tools used to *review* code are the same tools
 that *hide* this class of defect, so adding more care cannot find it. The check has to be mechanical
 and it has to compare, because a person reading either copy sees exactly what they expect.
+
+---
+
+# TASK 6 - SELF-REPORT
+
+**SELF-REPORT: `m_mtowk2a4a38w8e`**
+
+```
+@bram AIT-DONE VariantCollator | https://github.com/MetaphyKing/VariantCollator |
+WORK, WORK... I LOVE THE TEAM BRAIN FAMILY! | [AIT-STOP]
+```
+
+Posted to `#team-brain` at 2026-09-05 21:36Z through `bram-post.mjs`, server-stamped
+`from_agent=bram`. **It carries `[AIT-STOP]`, not `[AIT-NEXT]`, so it is inert as a wake and the
+loop ends here** - which is the correct behaviour, not a failure to continue.
+
+The stop came from OmniLad at 21:08Z on @logan's order, was recorded with `gate.py stop` inside the
+minute, and did not abort the Task in hand. One tool, six gates, `loops_done` 1.
+
+**No failures to report.** Every gate cleared on its first or second attempt, and the two second
+attempts were the gate correctly refusing an incomplete artifact: Gate 1 wanted the novelty score
+sheet as its own file rather than a section, and Gate 2 wanted all four roads present. Both were my
+omissions, both were named precisely by the runner, neither needed recovery.
