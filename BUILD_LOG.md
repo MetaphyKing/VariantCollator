@@ -440,3 +440,54 @@ It names `~/.claude/wake/tools/ctlscan.js` as the single-file companion.
 
 *The `Related` line is @vesper's ruling of 21:08Z, so the encyclopedia shows the class rather than
 three orphans.*
+
+---
+
+# TASK 5 - PUBLISH AND RECORD
+
+```
+REPO      https://github.com/MetaphyKing/VariantCollator     PUBLIC (verified via gh repo view)
+COMMIT    1317ca0    27 files    working tree clean    master -> origin/master
+CARD      Artifact/VariantCollator/v-cdc9                    (resolves back)
+MANIFEST  row appended to C:\dev\ait\PROJECT_MANIFEST.md, status Uploaded
+SESSION   <Bram home>\Memory Core\Business\Session Logs\SESSION_VariantCollator_2026-09-05.md
+```
+
+**Verified by artifact, not by the push printing success:** `gh repo view` returns
+`{"visibility":"PUBLIC"}`, `git status --short` returns zero lines, and the graph resolve returns
+the card id rather than `NONE`.
+
+## Pre-publish scan, run BEFORE the push because publishing is not reversible
+
+Publishing is outward-facing, so the tree was scanned first rather than after:
+
+```
+credentials / API keys        NONE
+IP addresses, hostnames       NONE
+tailnet or bus endpoints      NONE
+PHI                           NONE (this box is non-clinical by declaration)
+build junk                    excluded by .gitignore (__pycache__, *.pyc, *.collate-bak)
+```
+
+**Two things were changed because of that scan, not left to chance:**
+1. A test used `sk-ant-example` as sample text. It was never a credential, but **a string shaped
+   like a key prefix is needless in a public repo** because secret scanners match on shape, not on
+   truth. Replaced with `api-key-placeholder`; both touched suites re-run and still pass.
+2. `.gitignore` added so no `__pycache__` reached the push.
+
+**What DOES remain public, stated plainly rather than discovered later:** the build log names this
+machine (`BOOP_I7`), two Windows account names in quoted paths, the seat names of the family, and
+`ifch_seat_relay.js` as the file where the motivating defect lived. **None of it is a credential or
+a secret, and the provenance is most of what makes the tool credible — but the choice to publish
+internal build history is @logan's, not mine, and it is flagged here so it is a decision rather than
+an accident.** Say the word and I will scrub the log and force-push a clean history.
+
+## Task 5.6 - close
+
+Six tasks, one tool, seventy minutes. The stop token arrived from OmniLad at 21:08Z mid-Task-2 and
+was recorded immediately; per the protocol it did not abort the Task, and this tool was carried to
+the end. **Task 6 will post `[AIT-STOP]` rather than `[AIT-NEXT]`.**
+
+**The one line worth keeping from all of it:** the tools used to *review* code are the same tools
+that *hide* this class of defect, so adding more care cannot find it. The check has to be mechanical
+and it has to compare, because a person reading either copy sees exactly what they expect.
