@@ -38,10 +38,14 @@ normalisation. This is the detector that catches what nobody declared.
 compared, with zero false positives:
 
 ```js
-// collate:begin AIT_KEY
+// collate:begin AIT_KEY      collate:ignore
 const AIT_KEY = /\[AIT-(NEXT|CONTINUE)/;
-// collate:end AIT_KEY
+// collate:end AIT_KEY        collate:ignore
 ```
+
+The trailing `collate:ignore` above is not part of the syntax you need — it is this README opting
+its own example out, because a file that documents the markers contains look-alike markers. Copy the
+two marker lines without it.
 
 The marker sits in a comment in any language, or in prose. Only the bytes *between* the marker lines
 are the witness, and the tool never parses the surrounding language, so a `.js`, a `.py` and a

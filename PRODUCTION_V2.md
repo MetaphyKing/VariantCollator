@@ -65,9 +65,16 @@ missing paths. **No traceback in any case; usage errors exit 2 with a message.**
    ignored without comment looks exactly like one that succeeded. Now warns. (v2)
 6. **`--mode both` reported the same defect twice**, once per detector. Discovery now stands clear
    of declared regions. (v2)
+7. **The shipped README claimed it opted its own example out, and it did not.** Running the tool on
+   its own repository reported `UNPAIRED AIT_KEY` from the README's own sample markers, and the
+   sentence promising otherwise was simply false. Found **after the repo was already public**, by
+   running the shipped tool on the shipped tree - the first thing any user does and the one check
+   I had done for the source docstring and two roads but not for the file that actually ships.
+   (v2, fixed 21:44Z)
 
-*Four of the six were found by running the tool against real material rather than fixtures, and two
-of those were found by running it on itself.*
+*Five of the seven were found by running the tool against real material rather than fixtures, and
+three of those by running it on itself. The self-reference class alone accounts for three separate
+defects in three separate files, which is what a class looks like from the inside.*
 
 ## The finding road D contributed
 
