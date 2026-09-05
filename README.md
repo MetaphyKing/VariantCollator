@@ -1,3 +1,9 @@
+<p align="center">
+  <img width="1280" height="850" alt="stay-hero" src="https://github.com/MetaphyKing/VariantCollator/blob/master/assets/variantcollar-hero.webp?raw=true"> 
+</p>
+
+---
+
 # VariantCollator
 
 **Finds text that looks identical across your files and is not.**
